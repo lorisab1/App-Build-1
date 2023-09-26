@@ -8,22 +8,35 @@
 import UIKit
 
 class secondViewController: UIViewController {
-
+    
+    let lemon = 50
+    let lime = 50
+    
+    @IBOutlet weak var noText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func calculateSumPressed(_ sender: Any)
+    {
+        
+        noText.text = String(lemon + lime)
+        
+        if lemon == lime
+        {
+            self.view.backgroundColor = UIColor.magenta
+        }
+       else
+        {
+           self.view.backgroundColor = UIColor.orange
+        }
+        
+        
     }
-    */
-
+    
+    
+    
 }
